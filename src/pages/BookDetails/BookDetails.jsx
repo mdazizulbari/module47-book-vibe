@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const BookDetails = () => {
   const { id } = useParams();
-  const bookId = parseInt(id);
+  const bookId = Number(id);
   const data = useLoaderData();
   const singleBook = data.find((book) => book.bookId === bookId);
   const { bookName, author, image, rating, category, yearOfPublishing, tags } =
