@@ -1,15 +1,12 @@
 import React from "react";
-import bookimage from "../../assets/books.jpg";
+import bookimage from "../assets/books.jpg";
 
 const Banner = () => {
   return (
     <div className="">
       <div className="hero bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img
-            src={bookimage}
-            className="max-w-sm rounded-lg shadow-2xl"
-          />
+          <img src={bookimage} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">Box Office News!</h1>
             <p className="py-6">

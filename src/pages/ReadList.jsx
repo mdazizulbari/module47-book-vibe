@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { getStoredBook } from "../../utility/addToDB";
-import Book from "../Book/Book";
+import { getStoredBook } from "../utility/addToDB";
+import Book from "./Book";
 
 const ReadList = () => {
   // doing it in the worst way, there are more easier ways
@@ -35,8 +35,7 @@ const ReadList = () => {
     }
     if (type === "rating") {
       const sortedByRating = [...readList].sort((a, b) => a.rating - b.rating);
-      setReadList(sortedByRating)
-      
+      setReadList(sortedByRating);
     }
   };
 
