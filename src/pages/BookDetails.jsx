@@ -4,14 +4,14 @@ import { addToStoredDB } from "../utility/addToDB";
 // import Swal from "sweetalert2";
 // import withReactContent from "sweetalert2-react-content";
 import { ToastContainer, toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const BookDetails = () => {
   const { id } = useParams();
   const bookId = Number(id);
   const data = useLoaderData();
   const singleBook = data.find((book) => book.bookId === bookId);
-  const { bookName, author, image, rating, category, yearOfPublishing, tags } =
-    singleBook;
+  const { bookName, image } = singleBook;
   //   console.log(singleBook);
 
   // const MySwal = withReactContent(Swal);
@@ -31,6 +31,9 @@ const BookDetails = () => {
 
   return (
     <div className="w-2/3 mx-auto">
+      <Helmet>
+        <title>Book Details | {bookName}</title>
+      </Helmet>
       <img src={image} className="w-48" alt="" />
       <h4>{bookName}</h4>
       <ToastContainer />

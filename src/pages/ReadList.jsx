@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredBook } from "../utility/addToDB";
 import Book from "./Book";
+import { Helmet } from "react-helmet-async";
 
 const ReadList = () => {
   // doing it in the worst way, there are more easier ways
@@ -41,6 +42,7 @@ const ReadList = () => {
 
   return (
     <div className="mb-5">
+      <Helmet><title>Boi Poka | Listed books</title></Helmet>
       <details className="dropdown">
         <summary className="btn m-1">Sort By: {sort ? sort : "select"}</summary>
         <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
